@@ -5,9 +5,9 @@
 
 Array.prototype.reduce = function(cb, initVal) {
 
-  for (i = 0; i < this.length; i++) {
-    initVal = cb(initVal, this[i]);
-  }
+  this.forEach(function(element) {
+    initVal = cb(initVal, element);
+  });
   return initVal;
 }
 
